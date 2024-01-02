@@ -178,10 +178,9 @@ Gradio Docker Demo:
     sudo docker build -t dg .
     sudo docker run --gpus all -p 4567:4567 -it --restart=always --name dgc dg bash
     sudo docker exec -it dgc bash
-    pip install ./diff-gaussian-rasterization
-    pip install ./simple-knn
-    pip install git+https://github.com/NVlabs/nvdiffrast/
-    pip install git+https://github.com/ashawkey/kiuikit
+run first time:
+    pip install ./diff-gaussian-rasterization; pip install ./simple-knn; pip install git+https://github.com/NVlabs/nvdiffrast/; pip install git+https://github.com/ashawkey/kiuikit
+else:
     python3 gradio_app.py
 ```
 
