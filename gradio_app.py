@@ -65,7 +65,7 @@ if __name__ == "__main__":
         # Image-to-3D
         with gr.Row(variant='panel'):
             with gr.Column(scale=5):
-                image_block = gr.Image(type='pil', image_mode='RGBA', height=290, label='Input image', tool=None)
+                image_block = gr.Image(type='pil', image_mode='RGBA', height=290, label='Input image')
 
                 elevation_slider = gr.Slider(-90, 90, value=0, step=1, label='Estimated elevation angle')
                 gr.Markdown(
@@ -99,4 +99,4 @@ if __name__ == "__main__":
                                                                                               obj3d_stage1]).success(
                 optimize_stage_2, inputs=[elevation_slider], outputs=[obj3d])
 
-    demo.queue().launch(share=True)
+    demo.queue().launch(share=True, server_port=4555, server_name="0.0.0.0")
