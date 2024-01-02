@@ -172,9 +172,9 @@ Gradio Demo:
 ```bash
 python gradio_app.py
 ```
+Gradio Docker Demo:
 
-```Gradio Docker Demo:
-
+```bash
     sudo docker build -t dg .
     sudo docker run --gpus all -p 4567:4567 -it --restart=always --name dgc dg bash
     sudo docker exec -it dgc bash
