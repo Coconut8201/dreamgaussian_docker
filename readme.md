@@ -180,6 +180,7 @@ Gradio Docker Demo:
     sudo docker exec -it dgc bash
 run first time:
     pip install ./diff-gaussian-rasterization; pip install ./simple-knn; pip install git+https://github.com/NVlabs/nvdiffrast/; pip install git+https://github.com/ashawkey/kiuikit
+    python3 gradio_app.py
 else:
     python3 gradio_app.py
 ```
